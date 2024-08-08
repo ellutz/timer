@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stretching Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="timer-display">00:00</div>
+    <button id="open-popup-btn">Set Timer</button>
+    <button id="start-stop-btn" style="display: none;">Start</button> <!-- Hidden initially -->
+
+    <div id="popup" class="hidden">
+        <div id="popup-content">
+            <h2>Select Timer Settings</h2>
+            <div>
+                <label>Total Duration (minutes):</label>
+                <select id="total-duration-select">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                </select>
+            </div>
+            <div>
+                <label>First Sound Time (seconds):</label>
+                <select id="first-sound-select">
+                    <option value="0">0</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                    <option value="60">60</option>
+                </select>
+            </div>
+            <div>
+                <label>Second Sound Time (seconds):</label>
+                <select id="second-sound-select">
+                    <option value="0">0</option>
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                    <option value="60">60</option>
+                </select>
+            </div>
+            <button id="confirm-settings-btn">Confirm</button>
+            <button id="close-popup-btn">Cancel</button>
+        </div>
+    </div>
+
+    <audio id="first-sound" src="bell.mp3" preload="auto"></audio>
+    <audio id="second-sound" src="bell.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
